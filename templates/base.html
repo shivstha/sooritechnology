@@ -1,0 +1,748 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Soori Technologies Pvt. Ltd.</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="{% static "images/logo_images/soori_logo.png" %}" rel="icon">
+    <link href="{% static "images/logo_images/soori_logo.png" %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700"
+          rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+    <!-- Libraries CSS Files -->
+    <script src="https://kit.fontawesome.com/f41f16c23e.js" crossorigin="anonymous"></script>
+
+    <link href="{% static "lib/animate/animate.min.css" %}" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <link href="{% static "css/contact_styles.css" %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/carousel_client.css" %}"  type="text/css">
+
+
+    <style>
+
+        #home_slider .carousel-item {
+            height: 100vh;
+            min-height: 350px;
+            background: no-repeat center center scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        /* Make the image fully responsive */
+        #home_slider .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .client_row {
+            background-color: #ececec;
+            background-color: rgba(233, 230, 230, 0);
+            padding: 2% 0;
+        }
+
+        .socialsite_links {
+            padding: 8px 8px 8px 0px;
+            display: flex;
+            margin-bottom: 30px;
+
+        }
+
+        /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+        #header {
+            padding: 30px 0;
+            height: 92px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            transition: all 0.5s;
+            z-index: 2;
+        }
+
+        #header #logo {
+            float: left;
+            margin: auto;
+        }
+
+        #header #logo h1 {
+            font-size: 36px;
+            margin: 0;
+            padding: 6px 0;
+            line-height: 1;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        #header #logo h1 a, #header #logo h1 a:hover {
+            color: #fff;
+        }
+
+        #header #logo img {
+            padding: 0;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            #header #logo h1 {
+                font-size: 26px;
+            }
+
+            #header #logo img {
+                max-height: 40px;
+            }
+        }
+
+        #header.header-fixed {
+            /*background: rgba(52, 59, 64, 0.9);*/
+            background: white;
+            padding: 20px 0;
+            height: 80px;
+            transition: all 0.5s;
+        }
+
+        #header #toggle_button {
+            float: right;
+        }
+
+        #header #toggle_button {
+            font-size: 30px;
+            cursor: pointer;
+            right: 0;
+            top: 0;
+            position: absolute;
+            margin: 30px 40px 0 0;
+            color: black;
+
+        }
+
+        /* sidenav hamburger starts */
+
+        .index_menu {
+            position: absolute;
+            top: 30px;
+            right: 55px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 5;
+            top: 0;
+            right: 0;
+            overflow-x: hidden;
+            background-color: #FFF;
+            transition: 0.5s;
+            padding-top: 60px;
+            border-radius: 0;
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #bf1818;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        /*.ham_icon {*/
+        /*    position: fixed;*/
+        /*    right: 0;*/
+        /*    top: 0;*/
+        /*    z-index: 999;*/
+        /*    margin: 20px 20px 0 0;*/
+        /*    border: 0;*/
+        /*    background: none;*/
+        /*    font-size: 24px;*/
+        /*    display: none;*/
+        /*    transition: all 0.4s;*/
+        /*    outline: none;*/
+        /*    cursor: pointer;*/
+        /*}*/
+
+
+        /* sidenav hamburger ends */
+
+        /*--------------------------------------------------------------
+        # Hero Section
+        --------------------------------------------------------------*/
+        #hero {
+            width: 100%;
+            height: 512px;
+            background-size: cover;
+            position: relative;
+            object-fit: cover;
+        }
+
+        @media (min-width: 1024px) {
+            #hero {
+                background-attachment: fixed;
+            }
+        }
+
+        #hero:before {
+            content: "";
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #hero .hero-container {
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        #hero h1 {
+            margin: 30px 0 10px 0;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 56px;
+            /*text-transform: uppercase;*/
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 28px;
+                line-height: 36px;
+            }
+        }
+
+        #hero h2 {
+            color: #eee;
+            margin-bottom: 50px;
+            font-size: 24px;
+        }
+
+        @media (max-width: 768px) {
+            #hero h2 {
+                font-size: 18px;
+                line-height: 24px;
+                margin-bottom: 30px;
+            }
+        }
+
+        #hero .btn-get-started {
+            font-family: "Poppins", sans-serif;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 8px 28px;
+            border-radius: 50px;
+            transition: 0.5s;
+            margin: 10px;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+
+        #hero .btn-get-started:hover {
+            background: #2dc997;
+            border: 2px solid #2dc997;
+        }
+
+
+        /* Call To Action Section
+--------------------------------*/
+        #call-to-action {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{% static '/images/background_images/call-to-action-bg.jpg' %}') fixed center center;
+            background-size: cover;
+            padding: 80px 0;
+        }
+
+        #call-to-action .cta-title {
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        #call-to-action .cta-text {
+            color: #fff;
+        }
+
+        @media (min-width: 769px) {
+            #call-to-action .cta-btn-container {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+        }
+
+        #call-to-action .cta-btn {
+            font-family: "Poppins", sans-serif;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 8px 30px;
+            border-radius: 50px;
+            transition: 0.5s;
+            margin: 10px;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+
+        #call-to-action .cta-btn:hover {
+            background: #2dc997;
+            border: 2px solid #2dc997;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!--==========================
+Header
+============================-->
+<header id="header">
+    <div class="container">
+
+        <div id="logo" class="pull-left">
+            <a href="#hero"><img src="{% static "images/logo_images/soorilogo2.jpg" %}" alt="" title=""/></a>
+            <!-- Uncomment below if you prefer to use a text logo -->
+            <!--<h1><a href="#hero">Soori</a></h1>-->
+        </div>
+
+        <div id="toggle_button">
+            <span class="ham_icon" onclick="openNav()">&#9776;</span>
+        </div>
+
+
+    </div>
+</header><!-- #header -->
+
+<!--==========================
+  Hero Section
+============================-->
+
+<section id="home_slider" class="carousel slide" data-ride="carousel">
+    <div class="index_menu">
+        <div class="hamburger">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'service' %}">Services</a>
+                <a href="{% url 'product' %}">Products</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <hr>
+                <!--social sites links-->
+                <div class="socialsite_links">
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/sooriTechnology/" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                    <!--                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+        <li data-target="#demo" data-slide-to="3"></li>
+        <li data-target="#demo" data-slide-to="4"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static "images/hero_images/hero_2.jpg" %}">
+
+        </div>
+        <div class="carousel-item">
+            <img src="{% static "images/hero_images/hero_3.jpg" %}">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static "images/hero_images/hero_4.jpg" %}">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static "images/hero_images/hero_5.jpg" %}">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static "images/hero_images/hero_6.jpg" %}">
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</section>
+
+
+<main id="main">
+
+    <!--==========================
+      Our Services Section
+    ============================-->
+    <section id="about">
+        <div class="container">
+            <div class="row about-container">
+
+                <div class="col-lg-6 content order-lg-1 order-1">
+                    <h2 class="title">Our Services</h2>
+                    <p>
+                        Soori Techonlogy established with the aim providing ICT solution for business. Each business are
+                        seeking for enhance their performance,when we adopts
+                        technology performance increases. Some shortlisted solutions are...
+                    </p>
+
+                    <div class="icon-box wow fadeInUp">
+                        <div class="icon"><i class="fas fa-fingerprint"></i></div>
+                        <h4 class="title"><a href="">Identity solution</a></h4>
+                        <p class="description">We provide card printing system with the Card ID Solution on software
+                            expertise necessary. </p>
+                    </div>
+
+                    <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="icon"><i class="fas fa-hospital"></i></div>
+                        <h4 class="title"><a href="">Hospital payment solution</a></h4>
+                        <p class="description">We provide the system and the card that has been designed especially for
+                            medical purpose, card can
+                            be used to buy medicine and service within hospital and system hold the total transactions
+                            detail.
+                        </p>
+                    </div>
+
+                    <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="icon"><i class="fas fa-server"></i></div>
+                        <h4 class="title"><a href="">Warehouse solution</a></h4>
+                        <p class="description">Our warehouse solution will guide your operators through the execution of
+                            their tasks, which they will
+                            manage faster and without errors.</p>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 background order-lg-2 order-2 wow fadeInRight">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{% static "images/services_images/id.jpg" %}" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Identity solution</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static "images/services_images/hosp.jpg" %}" class="d-block w-100"
+                                     alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Hospital payment solution</h5>
+                                    <!--                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static "images/services_images/ware.jpg" %}" class="d-block w-100"
+                                     alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Warehouse solution</h5>
+                                    <!--                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section><!-- #services -->
+
+
+    <!--==========================
+      Products Section
+    ============================-->
+    <section id="portfolio">
+        <div class="container wow fadeInUp">
+            <div class="section-header">
+                <h3 class="section-title">Products</h3>
+                <p class="section-description">We prefer several brands products to solve ICT business problems.</p>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <ul id="portfolio-flters">
+                        <li data-filter=".filter-app, .filter-card, .filter-logo, .filter-web" class="filter-active">
+                            All
+                        </li>
+                        <li data-filter=".filter-app">Zebra</li>
+                        <li data-filter=".filter-card">Wacom</li>
+                        <li data-filter=".filter-logo">Superma</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row" id="portfolio-wrapper">
+                <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+                    <img src="{% static "images/products_images/bs.jpg" %}" alt="">
+                    <div class="details">
+                        <h4>Barcode Scanner</h4>
+                        <!--                            <span>Alored dono par</span>-->
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+                    <img src="{% static "images/products_images/bp.jpg" %}" alt="">
+                    <div class="details">
+                        <h4>Barcode Printer</h4>
+                        <!--                            <span>Alored dono par</span>-->
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+                    <img src="{% static "images/products_images/w.jpg" %}" alt="">
+                    <div class="details">
+                        <h4>Wacom</h4>
+                        <span>Wacom for business, education, desgin</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+                    <img src="{% static "images/products_images/sp.jpg" %}" alt="">
+                    <div class="details">
+                        <h4>Signature Pad</h4>
+                        <!--                            <span>Alored dono par</span>-->
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+
+                    <img src="{% static "images/products_images/l.jpg" %}" alt="">
+                    <div class="details">
+                        <h4>Labels</h4>
+                        <!--                                            <span>Alored dono par</span>-->
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+                    <img src="{% static "images/products_images/wb.jpg" %}" alt="">
+                    <div class="details">
+                        <h4>Wrist Band</h4>
+                        <!--                            <span>Alored dono par</span>-->
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
+                    <img src="{% static "images/products_images/ts.jpg" %}" alt="">
+                    <div class="details">
+                        <h4>Biometric Scanner</h4>
+                        <!--                            <span>Alored dono par</span>-->
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+                    <img src="{% static "images/products_images/wbp.jpg" %}" alt="">
+                    <div class="details">
+                        <h4>Wrist Band Printer</h4>
+                        <!--                                            <span>Alored dono par</span>-->
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section><!-- #portfolio -->
+
+    <!--==========================
+      Our Clients Section
+    ============================-->
+    <section id="call-to-action">
+        <div class="container wow fadeInUp">
+            <div class="section-header">
+                <h2 class="section-title" style="color:#fff;">Our Clients</h2>
+                <!--                <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem-->
+                <!--                    accusantium doloremque</p>-->
+            </div>
+            <div class="client_row">
+                <section class="customer-logos slider">
+                    <div class="slide"><img src=https://www.shirantech.com/frontend/images/bdair.png></div>
+                    <div class="slide"><img src=https://www.shirantech.com/frontend/images/appnt.png></div>
+                    <div class="slide"><img src=https://www.shirantech.com/frontend/images/dhapp.png></div>
+                    <div class="slide"><img src=https://www.shirantech.com/frontend/images/bdair.png></div>
+                    <div class="slide"><img src=https://www.shirantech.com/frontend/images/nepalbank.png></div>
+                    <div class="slide"><img src=https://www.shirantech.com/frontend/images/global.png></div>
+                    <div class="slide"><img src=https://www.shirantech.com/frontend/images/ppllogo.png></div>
+                    <div class="slide"><img src=https://www.shirantech.com/frontend/images/esewa_slider.png></div>
+                </section>
+            </div>
+
+        </div>
+    </section><!-- #clients -->
+
+
+</main>
+
+<!--==========================
+  Footer
+============================-->
+
+
+<!--footer section-->
+<footer>
+    <div class="container-fluid padding">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <img src="{% static "images/logo_images/soorilogo2.jpg" %}">
+                <hr class="light">
+                <p class="info">+977-9808445666</p>
+                <p class="info">info@sooritechnology.com</p>
+                <p class="info">Koteshwor-2</p>
+                <p class="info">Kathmandu, Nepal</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>Our Hours</h5>
+                <hr class="light">
+                <p class="info">Monday: 9am - 5pm</p>
+                <p class="info">Saturday: 10am - 4pm</p>
+                <p class="info">Sunday: closed</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>Service Area</h5>
+                <hr class="light">
+                <p class="info">Kathmandu</p>
+                <p class="info">Pokhara</p>
+                <p class="info">Butwal</p>
+                <p class="info">Jhapa</p>
+            </div>
+            <div class="col-12">
+                <hr class="light-100">
+                <h5>&copy; 2020 Soori Technologies Pvt. Ltd.</h5>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- JavaScript Libraries -->
+<script src="{% static "lib/jquery/jquery.min.js" %}"></script>
+<script src="{% static "lib/jquery/jquery-migrate.min.js" %}"></script>
+<script src="{% static "lib/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+<script src="{% static "lib/easing/easing.min.js" %}"></script>
+<script src="{% static "lib/wow/wow.min.js" %}"></script>
+<script src="{% static "lib/waypoints/waypoints.min.js" %}"></script>
+<script src="{% static "lib/counterup/counterup.min.js" %}"></script>
+<script src="{% static "lib/superfish/hoverIntent.js" %}"></script>
+<script src="{% static "lib/superfish/superfish.min.js" %}"></script>
+
+<!--for open and close navigation-->
+<script src="{% static "js/open_close_nav.js" %}"></script>
+
+<!--for client sections-->
+<script src="{% static "js/slick.js" %}" type="text/javascript" charset="utf-8"></script>
+
+
+<!-- Template Main Javascript File -->
+<script src="{% static "js/main.js" %}"></script>
+
+
+<script>
+    jQuery('body').on('click', function () {
+        if (parseInt(jQuery('#mySidenav').css('width')) > 0) {
+            closeNav();
+
+        }
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.customer-logos').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+    });
+</script>
+
+
+</body>
+</html>

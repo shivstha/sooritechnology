@@ -1,0 +1,730 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Soori Technologies Pvt. Ltd.</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="{% static 'images/logo_images/soori_logo.png' %}" rel="icon">
+    <link href="{% static 'images/logo_images/soori_logo.png' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700"
+          rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+    <!-- Libraries CSS Files -->
+    <script src="https://kit.fontawesome.com/f41f16c23e.js" crossorigin="anonymous"></script>
+
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/product_styles.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/contact_styles.css' %}">
+
+    <style>
+        .socialsite_links {
+            padding: 8px 8px 8px 0px;
+            display: flex;
+            margin-bottom: 30px;
+
+        }
+
+        /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+        #header {
+            padding: 30px 0;
+            height: 92px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            transition: all 0.5s;
+            z-index: 2;
+        }
+
+        #header #logo {
+            float: left;
+            margin: auto;
+        }
+
+        #header #logo h1 {
+            font-size: 36px;
+            margin: 0;
+            padding: 6px 0;
+            line-height: 1;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        #header #logo h1 a, #header #logo h1 a:hover {
+            color: #fff;
+        }
+
+        #header #logo img {
+            padding: 0;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            #header #logo h1 {
+                font-size: 26px;
+            }
+
+            #header #logo img {
+                max-height: 40px;
+            }
+        }
+
+        #header.header-fixed {
+            /*background: rgba(52, 59, 64, 0.9);*/
+            background: white;
+            padding: 20px 0;
+            height: 80px;
+            transition: all 0.5s;
+        }
+
+        #header #toggle_button {
+            float: right;
+        }
+
+        #header #toggle_button {
+            font-size: 30px;
+            cursor: pointer;
+            right: 0;
+            top: 0;
+            position: absolute;
+            margin: 30px 40px 0 0;
+            color: black;
+
+        }
+
+        /* sidenav hamburger starts */
+
+        .index_menu {
+            position: absolute;
+            top: 30px;
+            right: 55px;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 5;
+            top: 0;
+            right: 0;
+            overflow-x: hidden;
+            background-color: #FFF;
+            transition: 0.5s;
+            padding-top: 60px;
+            border-radius: 0;
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #bf1818;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        /*.ham_icon {*/
+        /*    position: fixed;*/
+        /*    right: 0;*/
+        /*    top: 0;*/
+        /*    z-index: 999;*/
+        /*    margin: 20px 20px 0 0;*/
+        /*    border: 0;*/
+        /*    background: none;*/
+        /*    font-size: 24px;*/
+        /*    display: none;*/
+        /*    transition: all 0.4s;*/
+        /*    outline: none;*/
+        /*    cursor: pointer;*/
+        /*}*/
+
+
+        /* sidenav hamburger ends */
+
+        /*--------------------------------------------------------------
+        # Hero Section
+        --------------------------------------------------------------*/
+        #hero {
+            width: 100%;
+            height: 512px;
+            background-size: cover;
+            position: relative;
+            object-fit: cover;
+        }
+
+        @media (min-width: 1024px) {
+            #hero {
+                background-attachment: fixed;
+            }
+        }
+
+        #hero:before {
+            content: "";
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #hero .hero-container {
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        #hero h1 {
+            margin: 30px 0 10px 0;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 56px;
+            /*text-transform: uppercase;*/
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 28px;
+                line-height: 36px;
+            }
+        }
+
+        #hero h2 {
+            color: #eee;
+            margin-bottom: 50px;
+            font-size: 24px;
+        }
+
+        @media (max-width: 768px) {
+            #hero h2 {
+                font-size: 18px;
+                line-height: 24px;
+                margin-bottom: 30px;
+            }
+        }
+
+        #hero .btn-get-started {
+            font-family: "Poppins", sans-serif;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 8px 28px;
+            border-radius: 50px;
+            transition: 0.5s;
+            margin: 10px;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+
+        #hero .btn-get-started:hover {
+            background: #2dc997;
+            border: 2px solid #2dc997;
+        }
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+<!--==========================
+Header
+============================-->
+<header id="header">
+    <div class="container">
+
+        <div id="logo" class="pull-left">
+            <a href="#hero"><img src="{% static 'images/logo_images/soorilogo2.jpg' %}" alt="" title=""/></a>
+            <!-- Uncomment below if you prefer to use a text logo -->
+            <!--<h1><a href="#hero">Soori</a></h1>-->
+        </div>
+
+        <div id="toggle_button">
+            <span class="ham_icon" onclick="openNav()">&#9776;</span>
+        </div>
+
+
+    </div>
+</header><!-- #header -->
+
+<!--==========================
+  Hero Section../img/Contact.jpg
+============================-->
+<section id="hero" style="background: url({% static 'images/background_images/products.jpg' %}) top center;">
+    <div class="index_menu">
+        <div class="hamburger">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                 <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'service' %}">Services</a>
+                <a href="#">Products</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <hr>
+                <!--social sites links-->
+                <div class="socialsite_links">
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/sooriTechnology/" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                    <!--                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-container">
+        <h1>Our Products</h1>
+        <h2>We have used wide range of products to resolve ICT business problems.</h2>
+        <!--        <a href="#about" class="btn-get-started">Get Started</a>-->
+    </div>
+</section><!-- #hero -->
+
+
+<!--products sections-->
+<body class="stretched">
+<section class="our_products">
+    <div class="container">
+        <div class="row product_container">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="" id="fetch" data-toggle="modal" data-target="#exampleModal-9" class="btn-block">
+                    <img src="{% static 'images/products_images/bs.jpg' %}" alt="">
+                    <p>Barcode Scanner</p>
+                </a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal-9" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header header-bottom">
+                            <button type="button" class="close product_closebtn" data-dismiss="modal"
+                                    aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body product_modal">
+                            <div class="product_image">
+                                <img src="{% static 'images/products_images/bs.jpg' %}" alt="">
+                            </div>
+                            <h1 class="prod_title" style="text-align: justify;">Barcode Scanner</h1>
+
+                            <p style="margin: 0in 0in 8pt; text-align: justify;"><span style="font-size:11pt"><span
+                                    style="line-height:107%"><span style="font-family:Calibri,sans-serif">Our generalpurpose barcode scanners are designed to meet a wide range of scanning needs, applications and budgets. These tough barcode scanners combine industry-leading data capture technology with an exterior virtually impervious to damage as well as speed that will make a difference in your business </span></span></span>
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="" id="fetch" data-toggle="modal" data-target="#exampleModal-8" class="btn-block">
+                    <img src="{% static 'images/products_images/bp.jpg' %}" alt="">
+                    <p>Barcode printer</p>
+                </a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal-8" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header header-bottom">
+                            <button type="button" class="close product_closebtn" data-dismiss="modal"
+                                    aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body product_modal">
+                            <div class="product_image">
+                                <img src="{% static 'images/products_images/bp.jpg' %}" alt="">
+                            </div>
+                            <h1 class="prod_title">Barcode printer</h1>
+
+                            <p style="margin: 0in 0in 8pt; text-align: justify;"><span style="font-size:11pt"><span
+                                    style="line-height:107%"><span style="font-family:Calibri,sans-serif"> Barcodes, Inc. has a full line of Zebra Printers to meet your organizations printing demands Whether you need a Direct Thermal Barcode Printer to print shipping labels for your transportation department or Thermal Transfer Barcode Printers to create ideal inventory labels and asset labels. Zebra printers are designed for a wide variety of applications, from small desktop printers like the GK420T, to larger industrial printers like the ZT410 and agile rugged mobile printers, the QLN420. Zebra has the barcode printer to meet your needs in any application or environment.
+  </span></span></span></p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="" id="fetch" data-toggle="modal" data-target="#exampleModal-7" class="btn-block">
+                    <img src="{% static 'images/products_images/wb.jpg' %}" alt="">
+                    <p>Wrist Band</p>
+                </a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal-7" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header header-bottom">
+                            <button type="button" class="close product_closebtn" data-dismiss="modal"
+                                    aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body product_modal">
+                            <div class="product_image">
+                                <img src="{% static 'images/products_images/wb.jpg' %}" alt="">
+                            </div>
+                            <h1 class="prod_title">Wrist Band</h1>
+
+                            <p style="margin: 0in 0in 8pt; text-align: justify;"><span style="font-size:11pt"><span
+                                    style="line-height:107%"><span style="font-family:Calibri,sans-serif">Wristbands are encircling strips worn on the wrist or lower forearm. The term can be used to refer to a bracelet-like band, similar to that of a wristwatch, to the cuff or other part of a sleeve that covers the wrist, or decorative or functional bands worn on the wrist for many different reasons. Wristbands are often worn and used similarly to event passes such as lanyards to information or allow people entry to events.
+ </span></span></span></p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="" id="fetch" data-toggle="modal" data-target="#exampleModal-6" class="btn-block">
+                    <img src="{% static 'images/products_images/wbp.jpg' %}" alt="">
+                    <p>Wrist Band Printer</p>
+                </a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal-6" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header header-bottom">
+                            <button type="button" class="close product_closebtn" data-dismiss="modal"
+                                    aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body product_modal">
+                            <div class="product_image">
+                                <img src="{% static 'images/products_images/wbp.jpg' %}" alt="">
+                            </div>
+                            <h1 class="prod_title">Wrist Band Printer</h1>
+
+                            <p style="margin: 0in 0in 8pt; text-align: justify;"><span style="font-size:11pt"><span
+                                    style="line-height:107%"><span style="font-family:Calibri,sans-serif">The Wasp WHC25 direct thermal wristband printer is designed to meet the needs for healthcare patient identification, hospitality, and event ticketing applications. Using direct thermal print technology, the WHC25 is a cost effective solution for printing barcoded wristbands that stand up to the rigors of hospital and medical office use.
+
+ </span></span></span></p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="" id="fetch" data-toggle="modal" data-target="#exampleModal-5" class="btn-block">
+                    <img src="{% static 'images/products_images/ts.jpg' %}" alt="">
+                    <p>Biometric Scanner</p>
+                </a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal-5" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header header-bottom">
+                            <button type="button" class="close product_closebtn" data-dismiss="modal"
+                                    aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body product_modal">
+                            <div class="product_image">
+                                <img src="{% static 'images/products_images/ts.jpg' %}" alt="">
+                            </div>
+                            <h1 class="prod_title">Biometric Scanner</h1>
+
+                            <p style="margin: 0in 0in 8pt; text-align: justify;"><span style="font-size:11pt"><span
+                                    style="line-height:107%"><span style="font-family:Calibri,sans-serif">Biometrics are automated methods of recognizing a person based on a physiological or behavioral characteristic. Among the features measured are face, fingerprints, hand geometry, handwriting, iris, retinal, vein, and voice. Biometric data are separate and distinct from personal information.
+
+ </span></span></span></p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="" id="fetch" data-toggle="modal" data-target="#exampleModal-4" class="btn-block">
+                    <img src="{% static 'images/products_images/l.jpg' %}" alt="">
+                    <p>Lables</p>
+                </a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal-4" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header header-bottom">
+                            <button type="button" class="close product_closebtn" data-dismiss="modal"
+                                    aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body product_modal">
+                            <div class="product_image">
+                                <img src="{% static 'images/products_images/l.jpg' %}" alt="">
+                            </div>
+                            <h1 class="prod_title">Lables</h1>
+
+                            <p style="margin: 0in 0in 8pt; text-align: justify;"><span style="font-size:11pt"><span
+                                    style="line-height:107%"><span style="font-family:Calibri,sans-serif">With IQ Color barcode labels exclusively from Zebra, you can use any Zebra thermal printer to print color on demand.
+
+ </span></span></span></p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="" id="fetch" data-toggle="modal" data-target="#exampleModal-3" class="btn-block">
+                    <img src="{% static 'images/products_images/sp.jpg' %}" alt="">
+                    <p>Signature Pad</p>
+                </a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal-3" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header header-bottom">
+                            <button type="button" class="close product_closebtn" data-dismiss="modal"
+                                    aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body product_modal">
+                            <div class="product_image">
+                                <img src="{% static 'images/products_images/sp.jpg' %}" alt="">
+                            </div>
+                            <h1 class="prod_title">Signature Pad</h1>
+
+                            <p style="margin: 0in 0in 8pt; text-align: justify;"><span style="font-size:11pt"><span
+                                    style="line-height:107%"><span style="font-family:Calibri,sans-serif">Wacom Signature Pads deliver outstanding reliability and signature clarity in attractive form factors that complement any counter, kiosk or desk.
+
+ </span></span></span></p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <a href="" id="fetch" data-toggle="modal" data-target="#exampleModal-2" class="btn-block">
+                    <img src="{% static 'images/products_images/w.jpg' %}" alt="">
+                    <p>Other Wacom Products</p>
+                </a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal-2" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header header-bottom">
+                            <button type="button" class="close product_closebtn" data-dismiss="modal"
+                                    aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body product_modal">
+                            <div class="product_image">
+                                <img src="{% static 'images/products_images/w.jpg' %}" alt="">
+                            </div>
+                            <h1 class="prod_title">Other Wacom Products</h1>
+
+                            <p style="margin: 0in 0in 8pt; text-align: justify;"><span style="font-size:11pt"><span
+                                    style="line-height:107%"><span style="font-family:Calibri,sans-serif">
+ 
+ </span></span></span></p>
+                            <p style="margin: 0in 0in 8pt; text-align: justify;">&nbsp;</p>
+
+                            <ul style="list-style-type: none;">
+                                <li style="margin: 0in 0in 8pt; text-align: justify;"><span style="font-size:16pt"><span
+                                        style="tab-stops:list .5in"><span style="line-height:107%"><span
+                                        style="font-family:Calibri,sans-serif">Wacom for business </span></span></span></span>
+                                </li>
+                                <li style="margin: 0in 0in 8pt; text-align: justify;"><span style="font-size:11pt"><span
+                                        style="tab-stops:list .5in"><span style="line-height:107%"><span
+                                        style="font-family:Calibri,sans-serif">-Financial service </span></span></span></span>
+                                </li>
+                                <li style="margin: 0in 0in 8pt; text-align: justify;"><span style="font-size:11pt"><span
+                                        style="tab-stops:list .5in"><span style="line-height:107%"><span
+                                        style="font-family:Calibri,sans-serif">-Health care </span></span></span></span>
+                                </li>
+                                <li style="margin: 0in 0in 8pt; text-align: justify;"><span style="font-size:11pt"><span
+                                        style="tab-stops:list .5in"><span style="line-height:107%"><span
+                                        style="font-family:Calibri,sans-serif">-Public and private sector</span></span></span></span>
+                                </li>
+                                <li style="margin: 0in 0in 8pt; text-align: justify;"><span style="font-size:11pt"><span
+                                        style="tab-stops:list .5in"><span style="line-height:107%"><span
+                                        style="font-family:Calibri,sans-serif">-Hospitality / Tourism</span></span></span></span>
+                                </li>
+                                <li style="margin: 0in 0in 8pt; text-align: justify;"><span style="font-size:11pt"><span
+                                        style="tab-stops:list .5in"><span style="line-height:107%"><span
+                                        style="font-family:Calibri,sans-serif">-Retail service </span></span></span></span>
+                                </li>
+                                <li style="margin: 0in 0in 8pt; text-align: justify;"><span style="font-size:16pt"><span
+                                        style="tab-stops:list .5in"><span style="line-height:107%"><span
+                                        style="font-family:Calibri,sans-serif">Wacom for education</span></span></span></span>
+                                </li>
+                                <li style="margin: 0in 0in 8pt; text-align: justify;"><span style="font-size:16pt"><span
+                                        style="tab-stops:list .5in"><span style="line-height:107%"><span
+                                        style="font-family:Calibri,sans-serif">Wacom for design </span></span></span></span>
+                                </li>
+
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+
+
+<!--footer section-->
+<footer>
+    <div class="container-fluid padding">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <img src="{% static 'images/logo_images/soorilogo2.jpg' %}">
+                <hr class="light">
+                <p class="info">+977-9808445666</p>
+                <p class="info">info@sooritechnology.com</p>
+                <p class="info">Koteshwor-2</p>
+                <p class="info">Kathmandu, Nepal</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>Our Hours</h5>
+                <hr class="light">
+                <p class="info">Monday: 9am - 5pm</p>
+                <p class="info">Saturday: 10am - 4pm</p>
+                <p class="info">Sunday: closed</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>Service Area</h5>
+                <hr class="light">
+                <p class="info">Kathmandu</p>
+                <p class="info">Pokhara</p>
+                <p class="info">Butwal</p>
+                <p class="info">Jhapa</p>
+            </div>
+            <div class="col-12">
+                <hr class="light-100">
+                <h5>&copy; 2020 Soori Technologies Pvt. Ltd.</h5>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- JavaScript Libraries -->
+
+<!-- JavaScript Libraries -->
+<script src="{% static "lib/jquery/jquery.min.js" %}"></script>
+<script src="{% static "lib/jquery/jquery-migrate.min.js" %}"></script>
+<script src="{% static "lib/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+<script src="{% static "lib/easing/easing.min.js" %}"></script>
+<script src="{% static "lib/wow/wow.min.js" %}"></script>
+<script src="{% static "lib/waypoints/waypoints.min.js" %}"></script>
+<script src="{% static "lib/counterup/counterup.min.js" %}"></script>
+<script src="{% static "lib/superfish/hoverIntent.js" %}"></script>
+<script src="{% static "lib/superfish/superfish.min.js" %}"></script>
+
+<!--for open and close navigation-->
+<script src="{% static "js/open_close_nav.js" %}"></script>
+
+
+<!-- Template Main Javascript File -->
+<script src="{% static "js/main.js" %}"></script>
+
+
+
+
+<script>
+    jQuery('body').on('click', function () {
+        if (parseInt(jQuery('#mySidenav').css('width')) > 0) {
+            closeNav();
+
+        }
+    });
+</script>
+
+
+</body>
+</html>
