@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800");
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat", "sans-serif";
+}
+
+
+/* ==========================================================================================================
+                    ADVANTAGES
+   ========================================================================================================== */
+.fh5co-advantages-outer {
+    padding: 70px;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.fh5co-advantages-outer .span-perfect {
+    color: #648cff;
+    padding-left: 80px;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1px;
+    position: relative;
+    text-align: justify;
+
+
+}
+
+.fh5co-advantages-outer .span-perfect:before {
+    content: "";
+    display: block;
+    background-color: #648cff;
+    width: 75px;
+    height: 3px;
+    position: absolute;
+    text-align: justify;
+    left: 0;
+    top: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column-1 {
+    float: left;
+    padding-top: 20px;
+    width: 50%;
+    padding: 10px;
+    height: 120px;
+}
+
+.column-2 {
+    float: left;
+    padding-top: 20px;
+    width: 50%;
+    padding: 10px;
+    height: 120px;
+}
+
+
+.fh5co-advantages-outer .fh5co-advantages-grid-columns {
+    margin-top: 120px;
+}
+
+.fh5co-advantages-outer .fh5co-advantages-grid-columns .col-sm-4 .grid-image {
+    width: 30%;
+    float: left;
+    padding-right: 30px;
+    position: relative;
+    top: 1px;
+    color: #648cff;
+}
+
+.fh5co-advantages-outer .fh5co-advantages-grid-columns .col-sm-4 .grid-title {
+    float: left;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.fh5co-advantages-outer .fh5co-advantages-grid-columns .col-sm-4 .grid-desc {
+    float: right;
+    font-size: 13px;
+    padding-right: 7%;
+    width: 70%;
+    color: #c7c7c7;
+    margin-top: 10px;
+    line-height: 1.87em;
+}
+
+.fh5co-slider-inner {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+
+/* ==========================================================================================================
+                                       RESPONSIVE STYLING
+  ========================================================================================================== */
+
+
+@media screen and (max-width: 993px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .fh5co-advantages-outer .fh5co-advantages-grid-columns .col-sm-4 .grid-image {
+        width: 60px;
+        float: none;
+        display: block;
+        margin: 0 auto;
+        padding-right: 0px;
+        margin-bottom: 20px;
+        position: relative;
+        top: 1px;
+    }
+
+    .fh5co-advantages-outer .fh5co-advantages-grid-columns .col-sm-4 .grid-title {
+        float: none;
+        text-align: center;
+    }
+
+    .fh5co-advantages-outer .fh5co-advantages-grid-columns .col-sm-4 .grid-desc {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    @media screen and (max-width: 800px) {
+
+        .fh5co-advantages-outer .fh5co-advantages-grid-columns {
+            margin-top: 40px;
+        }
+
+        .fh5co-advantages-grid-columns .col-sm-4 {
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            width: 100%;
+            max-width: 100%;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .
+        .fh5co-advantages-outer .second-title {
+            margin-top: 60px;
+        }
+
+        @media screen and (max-width: 520px) {
+
+            .fh5co-advantages-outer .span-perfect {
+                margin-top: 80px;
+                font-size: 18px;
+                margin-bottom: 15px;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+
+            .fh5co-advantages-outer .column-1 {
+                font-size: 24px;
+                width: 100%;
+                height: 300px;
+                text-align: center;
+            }
+
+            .fh5co-advantages-outer .column-2 {
+                font-size: 24px;
+                width: 100%;
+                height: 200px;
+                text-align: center;
+            }
+
+        }
+    }
+}

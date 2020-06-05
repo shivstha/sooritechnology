@@ -40,6 +40,16 @@
 
         }
 
+        .core_values li:before {
+            color: #B4202E;
+            left: 0;
+            font-size: 20px;
+            top: -.3rem;
+
+            content: " \2714 ";
+            position: absolute;
+        }
+
         /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -311,7 +321,7 @@ Header
         <div class="hamburger">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                 <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'home' %}">Home</a>
                 <a href="#">About</a>
                 <a href="{% url 'service' %}">Services</a>
                 <a href="{% url 'product' %}">Products</a>
@@ -395,6 +405,36 @@ We have remarkably talented experts and software engineers who guide and lead wi
                     </div>
                 </div>
             </div>
+            <div class="row row_aboutt_us  mt-5 ">
+                <div class="col-md-6">
+                    <div class="why_us">
+                        <h1>Our Core Values</h1>
+                    </div>
+                    <div class="whyus_details">
+                        <ul class="core_values">
+                            <ul>
+                                <li><strong>Integrity:</strong> We uphold the highest standards of integrity in all of
+                                    our actions.
+                                </li>
+                                <li><strong>Quality Deliverable: </strong>We assure you to deliver the best quality in
+                                    every project we undertake to provide premium value to our clients.
+                                </li>
+                                <li><strong>The pursuit of Excellence: </strong> We deliver quality &amp; innovative
+                                    solutions to exceed industry standards and client expectations.
+                                </li>
+                                <li><strong>Learn: </strong> We measure, analyze, monitor, and improve outcomes
+                                    continuously by learning new trends and techniques.
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="img_ofc">
+                        <img src="{% static 'images/aboutus_images/core_values.jpg' %}" alt="">
+                    </div>
+                </div>
+            </div>
 
         </div>
     </section>
@@ -459,7 +499,6 @@ We have remarkably talented experts and software engineers who guide and lead wi
 
 <!-- Template Main Javascript File -->
 <script src="{% static "js/main.js" %}"></script>
-
 
 
 <script>
