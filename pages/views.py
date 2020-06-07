@@ -19,3 +19,15 @@ def productpage(request):
 
 def servicepage(request):
     return render(request, 'services.html')
+
+
+def wacompage(request):
+    return render(request, 'wacom.html')
+
+
+def zebrapage(request):
+    return render(request, 'zebra.html')
+
+
+def supermapage(request):
+    return render(request, 'superma.html')

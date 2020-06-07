@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import homepage, aboutpage, contactpage, productpage, servicepage
+from .views import homepage, aboutpage, contactpage, productpage, servicepage, wacompage, zebrapage, supermapage
 
 
 app_name = 'pages'
@@ -11,4 +11,7 @@ urlpatterns = [
     path('contact_us/', contactpage, name='contact'),
     path('products/', productpage, name='product'),
     path('services/', servicepage, name='service'),
+    path('wacom/', wacompage, name='wacom'),
+    path('zebra/', zebrapage, name='zebra'),
+    path('superma/', supermapage, name='superma'),
 ]

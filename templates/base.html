@@ -348,6 +348,12 @@
             background: #2dc997;
             border: 2px solid #2dc997;
         }
+
+        .second-title {
+            color: #333;
+            font-weight: 700;
+            font-size: 32px;
+        }
     </style>
 
 </head>
@@ -447,10 +453,10 @@ Header
     <section id="about_us">
         <div class="fh5co-advantages-outer">
             <div class="container">
-                <h1 class="second-title"><span class="span-perfect">About Us</span></h1>
+                <h2 class="second-title">About Us</h2>
                 <div class="row">
                     <div class="column-1">
-                        <h2>We provide ICT solution for your business</h2>
+                        <h3>We provide ICT solution for your business</h3>
 
                     </div>
                     <div class="column-2">
@@ -573,89 +579,42 @@ Header
     <section id="portfolio">
         <div class="container wow fadeInUp">
             <div class="section-header">
-                <h3 class="section-title">Products</h3>
-                <p class="section-description">We prefer several brands products to solve ICT business problems.</p>
+                <h2 class="section-title">Our Products</h2>
             </div>
-            <div class="row">
 
-                <div class="col-lg-12">
-                    <ul id="portfolio-flters">
-                        <li data-filter=".filter-app, .filter-card, .filter-logo, .filter-web" class="filter-active">
-                            All
-                        </li>
-                        <li data-filter=".filter-app">Zebra</li>
-                        <li data-filter=".filter-card">Wacom</li>
-                        <li data-filter=".filter-logo">Superma</li>
-                    </ul>
-                </div>
-            </div>
 
             <div class="row" id="portfolio-wrapper">
-                <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-                    <img src="{% static "images/products_images/bs.jpg" %}" alt="">
-                    <div class="details">
-                        <h4>Barcode Scanner</h4>
-                        <!--                            <span>Alored dono par</span>-->
-                    </div>
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <img src="{% static "images/products_images/Zebra.png" %}" alt="">
+                    <a href="{% url 'pages:zebra' %}">
+                        <div class="details">
+                            <h4>Zebra</h4>
+                            <span>Click for more information</span>
+                        </div>
+
+                    </a>
                 </div>
 
 
-                <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-                    <img src="{% static "images/products_images/bp.jpg" %}" alt="">
-                    <div class="details">
-                        <h4>Barcode Printer</h4>
-                        <!--                            <span>Alored dono par</span>-->
-                    </div>
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <img src="{% static "images/products_images/Wacom.jpg" %}" alt="">
+                    <a href="{% url 'pages:wacom' %}">
+                        <div class="details">
+                            <h4>Wacom</h4>
+                            <span>Click for more information</span>
+                        </div>
+                    </a>
                 </div>
 
-                <div class="col-lg-3 col-md-6 portfolio-item filter-card">
-                    <img src="{% static "images/products_images/w.jpg" %}" alt="">
-                    <div class="details">
-                        <h4>Wacom</h4>
-                        <span>Wacom for business, education, desgin</span>
-                    </div>
-                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                    <img src="{% static "images/products_images/Superma.jpg" %}" alt="">
+                    <a href="{% url 'pages:superma' %}">
+                        <div class="details">
+                            <h4>Superma</h4>
+                            <span>Click for more information</span>
+                        </div>
 
-                <div class="col-lg-3 col-md-6 portfolio-item filter-card">
-                    <img src="{% static "images/products_images/sp.jpg" %}" alt="">
-                    <div class="details">
-                        <h4>Signature Pad</h4>
-                        <!--                            <span>Alored dono par</span>-->
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-
-                    <img src="{% static "images/products_images/l.jpg" %}" alt="">
-                    <div class="details">
-                        <h4>Labels</h4>
-                        <!--                                            <span>Alored dono par</span>-->
-                    </div>
-                </div>
-
-
-                <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-                    <img src="{% static "images/products_images/wb.jpg" %}" alt="">
-                    <div class="details">
-                        <h4>Wrist Band</h4>
-                        <!--                            <span>Alored dono par</span>-->
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
-                    <img src="{% static "images/products_images/ts.jpg" %}" alt="">
-                    <div class="details">
-                        <h4>Biometric Scanner</h4>
-                        <!--                            <span>Alored dono par</span>-->
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-                    <img src="{% static "images/products_images/wbp.jpg" %}" alt="">
-                    <div class="details">
-                        <h4>Wrist Band Printer</h4>
-                        <!--                                            <span>Alored dono par</span>-->
-                    </div>
+                    </a>
                 </div>
 
 

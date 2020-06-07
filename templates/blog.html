@@ -196,7 +196,7 @@
         #services .box {
             margin-bottom: 50px;
             border: 1px solid #e6e6e6;
-            height: 400px;
+            height: 380px;
             position: relative;
             background: #fafafa;
         }
@@ -218,6 +218,11 @@
 
         }
 
+        #read_more {
+            position: absolute;
+            bottom: 0;
+            padding: 10px;
+            }
 
     </style>
 
@@ -233,7 +238,7 @@ Header
     <div class="container">
 
         <div id="logo" class="pull-left">
-            <a href="#hero"><img src="{% static "images/logo_images/soorilogo2.jpg" %}" alt="" title=""/></img></a>
+            <a href="#hero"><img src="{% static "images/logo_images/soorilogo2.jpg" %}" alt="" title=""/></a>
             <!-- Uncomment below if you prefer to use a text logo -->
             <!--<h1><a href="#hero">Soori</a></h1>-->
         </div>
@@ -297,7 +302,7 @@ Header
                             <div class="description">
                                 {{ post.body1|truncatewords:20|linebreaks }}
                             </div>
-                            <div class="text-center">
+                            <div id="read_more">
 
                                 <a href="{{ post.get_absolute_url }}" class="btn btn-primary btn-sm"
                                    style="padding: 5px;">Read more</a>
