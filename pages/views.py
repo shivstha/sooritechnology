@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 def homepage(request):
-    return render(request, "base_test.html")
+    return render(request, "base.html")
 
 
 def aboutpage(request):

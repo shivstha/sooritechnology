@@ -321,11 +321,12 @@ Header
         <div class="hamburger">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'pages:home' %}">Home</a>
                 <a href="#">About</a>
-                <a href="{% url 'service' %}">Services</a>
-                <a href="{% url 'product' %}">Products</a>
-                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'blog:blog_list' %}">Blog</a>
+                <a href="{% url 'pages:service' %}">Services</a>
+                <a href="{% url 'pages:product' %}">Products</a>
+                <a href="{% url 'pages:contact' %}">Contact</a>
                 <hr>
                 <!--social sites links-->
                 <div class="socialsite_links">

@@ -1,6 +1,10 @@
 from django.urls import path
 from .views import homepage, aboutpage, contactpage, productpage, servicepage
 
+
+app_name = 'pages'
+
+
 urlpatterns = [
     path('', homepage, name='home'),
     path('about_us/', aboutpage, name='about'),

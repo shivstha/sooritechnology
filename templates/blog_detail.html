@@ -1,4 +1,5 @@
 {% load static %}
+{% load blog_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +10,8 @@
     <meta content="" name="description">
 
     <!-- Favicons -->
-    <link href="{% static 'images/logo_images/soori_logo.png' %}" rel="icon">
-    <link href="{% static 'images/logo_images/soori_logo.png' %}" rel="apple-touch-icon">
+    <link href="{% static "images/logo_images/soori_logo.png" %}" rel="icon">
+    <link href="{% static "images/logo_images/soori_logo.png" %}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700"
@@ -26,12 +27,12 @@
     <!-- Libraries CSS Files -->
     <script src="https://kit.fontawesome.com/f41f16c23e.js" crossorigin="anonymous"></script>
 
-    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
 
     <!-- Main Stylesheet File -->
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/contact_styles.css' %}">
-
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static "css/contact_styles.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/style_blogdetail.css" %}">
     <style>
         .socialsite_links {
             padding: 8px 8px 8px 0px;
@@ -39,17 +40,6 @@
             margin-bottom: 30px;
 
         }
-
-        .core_values li:before {
-            color: #B4202E;
-            left: 0;
-            font-size: 20px;
-            top: -.3rem;
-
-            content: " \2714 ";
-            position: absolute;
-        }
-
 
         /*--------------------------------------------------------------
 # Header
@@ -287,6 +277,175 @@
         }
 
 
+        {#for form styles#}
+
+
+        .section-header .section-title {
+            color: #33ccff;
+            padding-left: 80px;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            position: relative;
+            text-align: justify;
+            padding-top: 100px;
+        }
+
+        .section-header .section-title:before {
+            content: "";
+            display: block;
+            background-color: #33ccff;
+            width: 75px;
+            height: 1px;
+            text-align: justify;
+            position: absolute;
+            left: 0;
+            top: 95%;
+        }
+
+        .section-header .section-description {
+            text-align: center;
+            padding-bottom: 40px;
+            color: #999;
+        }
+
+
+        /* Contact Section
+        --------------------------------*/
+        /* yeha dekhi tala footer bhanda mathi samma copy paste gara */
+        #contact {
+            background: #f7f7f7;
+
+        }
+
+
+        #contact .info {
+            color: #333333;
+
+        }
+
+        #contact .info i {
+            font-size: 20px;
+            color: #2dc997;
+            float: left;
+        }
+
+        #contact .info p {
+
+            padding: 0 0 10px 50px;
+            margin-bottom: 20px;
+            line-height: 22px;
+            font-size: 14px;
+
+
+        }
+
+        #contact .info .email p {
+            padding-top: 5px;
+        }
+
+        #contact .social-links {
+            padding-bottom: 20px;
+        }
+
+        #contact .social-links a {
+            font-size: 18px;
+            display: inline-block;
+            background: #fff;
+            color: #fff;
+            line-height: 1;
+            padding: 8px 0;
+            border-radius: 50%;
+            text-align: center;
+            width: 36px;
+            height: 36px;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+
+        #contact .social-links a:hover {
+            background: #2dc997;
+            color: #fff;
+        }
+
+        #contact .form #sendmessage {
+            color: #2dc997;
+            border: 1px solid #2dc997;
+            display: none;
+            text-align: center;
+            padding: 15px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        #contact .form #errormessage {
+            color: red;
+            display: none;
+            border: 1px solid red;
+            text-align: center;
+            padding: 15px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        #contact .form #sendmessage.show, #contact .form #errormessage.show, #contact .form .show {
+            display: block;
+        }
+
+        #contact .form .validation {
+            color: red;
+            display: none;
+            margin: 0 0 20px;
+            font-weight: 400;
+            font-size: 13px;
+        }
+
+        #contact .form input, #contact .form textarea {
+            width: 100%;
+            overflow: hidden;
+            font-size: 14px;
+            padding: 10px 0;
+            margin: 8px 0;
+            border-bottom: 2px solid #33ccff;
+            outline: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            background: #f7f7f7;
+        }
+
+
+        #contact .form button[type="submit"] {
+
+            transition: 0.4s;
+            background: #33ccff;
+            border: 0;
+            border-radius: 30px;
+            color: #fff;
+            cursor: pointer;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            padding: 11.5px 25px;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+
+        #contact .form button[type="submit"]:hover {
+            background: #51d8ad;
+        }
+
+        /*--------------------------------------------------------------
+         */
+        .ion-ios-person:before {
+            content: "\f47e"
+        }
+
+
     </style>
 
 
@@ -301,7 +460,7 @@ Header
     <div class="container">
 
         <div id="logo" class="pull-left">
-            <a href="#hero"><img src="{% static 'images/logo_images/soorilogo2.jpg' %}" alt="" title=""/></a>
+            <a href="#hero"><img src="{% static "images/logo_images/soorilogo2.jpg" %}" alt="" title=""/></a>
             <!-- Uncomment below if you prefer to use a text logo -->
             <!--<h1><a href="#hero">Soori</a></h1>-->
         </div>
@@ -314,10 +473,7 @@ Header
     </div>
 </header><!-- #header -->
 
-<!--==========================
-  Hero Section../img/Contact.jpg
-============================-->
-<section id="hero" style="background: url({% static 'images/background_images/services.jpg' %}) top center;">
+<main id="main">
     <div class="index_menu">
         <div class="hamburger">
             <div id="mySidenav" class="sidenav">
@@ -325,14 +481,15 @@ Header
                 <a href="{% url 'pages:home' %}">Home</a>
                 <a href="{% url 'pages:about' %}">About</a>
                 <a href="{% url 'blog:blog_list' %}">Blog</a>
-                <a href="#">Services</a>
+                <a href="{% url 'pages:service' %}">Services</a>
                 <a href="{% url 'pages:product' %}">Products</a>
-                <a href="{% url 'pages:contact' %}">Contact</a>
+                <a href="#">Contact</a>
                 <hr>
                 <!--social sites links-->
                 <div class="socialsite_links">
                     <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/sooriTechnology/" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/sooriTechnology/" class="facebook"><i
+                            class="fa fa-facebook"></i></a>
                     <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
                     <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
                     <!--                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>-->
@@ -340,154 +497,57 @@ Header
             </div>
         </div>
     </div>
-
-    <div class="hero-container">
-        <h1>Our Services</h1>
-        <h2>We provide large range of ICT business
-            solutions.</h2>
-        <!--        <a href="#about" class="btn-get-started">Get Started</a>-->
-    </div>
-</section><!-- #hero -->
-
-
-<main id="main">
-
-    <section class="contact-sec">
+    <section class="blog-wrapper sect-pt4" id="blog">
         <div class="container">
-            <div class="row row_aboutt_us">
-                <div class="col-md-6">
-                    <div class="why_us">
-                        <h1>Identity solution</h1>
-                    </div>
-                    <div class="whyus_details">
-                        <p>We provide card printing system with the Card ID Solution on software expertise necessary. It
-                            includes everything need to quickly and cost-effectively make professional-quality
-                            identification, security and commerce-related cards.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="img_ofc">
-                        <img src="{% static 'images/services_images/id.jpg' %}" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5  row_aboutt_us">
-                <div class="col-md-6">
-                    <div class="img_ofc">
-                        <img src="{% static 'images/services_images/hosp.jpg' %}" alt="">
-                    </div>
-                </div>
-                <div class=" col-md-6">
-                    <div class="why_us">
-                        <h1>Hospital payment solution</h1>
-                    </div>
-                    <div class="whyus_details">
-                        <p>We provide the system and the card that has been designed especially for medical purpose,
-                            card can be used to buy medicine and service within hospital and system hold the total
-                            transactions detail.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row row_aboutt_us  mt-5 ">
-                <div class="col-md-6">
-                    <div class="why_us">
-                        <h1>Warehouse solution</h1>
-                    </div>
-                    <div class="whyus_details">
-                        <p>Our warehouse solution will guide your operators through the execution of their tasks, which
-                            they will manage faster and without errors. As our software is easy to use, you can easily
-                            reinforce your teams with temporary workers, who will be up and running in no time. You will
-                            have full control and visibility of all operations, which provides the following
-                            benefits:</p>
-                        <ul class="core_values">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-box">
+                        <div class="post-thumb">
+                            <img src="{{ post.image_url }}"
+                                 class="img-fluid" alt="">
+                        </div>
+                        <div class="post-meta">
+                            <h1 class="article-title">{{ post.title }}</h1>
                             <ul>
-                                <li> Error-free deliveries
-                                </li>
-                                <li> Maximum stock availability
-                                </li>
-                                <li> Ability to accept ‘last minute’ orders
-                                </li>
-                                <li> Reliable delivery dates and traceability
+                                <li>
+                                    <i class="fa fa-user"></i>
+                                    <a href="#">{{ post.author }}</a>
                                 </li>
                             </ul>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="img_ofc">
-                        <img src="{% static 'images/services_images/ware.jpg' %}" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5  row_aboutt_us">
-                <div class="col-md-6">
-                    <div class="img_ofc">
-                        <img src="{% static 'images/services_images/event.jpg' %}" alt="">
-                    </div>
-                </div>
-                <div class=" col-md-6">
-                    <div class="why_us">
-                        <h1>Corporate event management</h1>
-                    </div>
-                    <div class="whyus_details">
-                        <p>We provide most powerful hardware and software solution to corporate business firms, through
-                            which firms can carry their AGM , training to their employees, dealership member meeting etc
-                            in a proper manner.</p>
-                    </div>
-                </div>
-            </div>
+                        </div>
+                        <div class="article-content">
+                            {{ post.body1|markdown }}
 
-            <div class="row row_aboutt_us  mt-5 ">
-                <div class="col-md-6">
-                    <div class="why_us">
-                        <h1>Remote / Distance / Online learning </h1>
-                    </div>
-                    <div class="whyus_details">
-                        <p>Our warehouse solution will guide your operators through the execution of their tasks, which
-                            they will manage faster and without errors. As our software is easy to use, you can easily
-                            reinforce your teams with temporary workers, who will be up and running in no time. You will
-                            have full control and visibility of all operations, which provides the following
-                            benefits:</p>
 
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="img_ofc">
-                        <img src="{% static 'images/services_images/online.jpg' %}" alt="">
+                            <blockquote class="blockquote">
+                                <p class="mb-0">
+                                    {{ post.quote|markdown }}
+
+                                </p>
+                            </blockquote>
+
+                            {{ post.body2|markdown }}
+
+
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5  row_aboutt_us">
-                <div class="col-md-6">
-                    <div class="img_ofc">
-                        <img src="{% static 'images/services_images/intractive.png' %}" alt="">
-                    </div>
-                </div>
-                <div class=" col-md-6">
-                    <div class="why_us">
-                        <h1>Interactive classroom</h1>
-                    </div>
-                    <div class="whyus_details">
-                        <p>We provide most powerful hardware and software solution to corporate business firms, through
-                            which firms can carry their AGM , training to their employees, dealership member meeting etc
-                            in a proper manner.</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
+    <!--/ Section Blog-Single End /-->
 
 </main>
 
+<!--==========================
+  Footer
+============================-->
 
-<!--footer section-->
 <footer>
     <div class="container-fluid padding">
         <div class="row text-center">
             <div class="col-md-4">
-                <img src="{% static 'images/logo_images/soorilogo2.jpg' %}">
+                <img src="{% static "images/logo_images/soorilogo2.jpg" %}">
                 <hr class="light">
                 <p class="info">+977-9808445666</p>
                 <p class="info">info@sooritechnology.com</p>
@@ -519,7 +579,6 @@ Header
     </div>
 </footer>
 
-
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
 <!-- JavaScript Libraries -->
@@ -535,7 +594,8 @@ Header
 
 <!--for open and close navigation-->
 <script src="{% static "js/open_close_nav.js" %}"></script>
-
+<!-- Contact Form JavaScript File -->
+<script src="{% static "contactform/contactform.js" %}"></script>
 
 <!-- Template Main Javascript File -->
 <script src="{% static "js/main.js" %}"></script>
