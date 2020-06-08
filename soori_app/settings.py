@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # third party apps
     # local apps
     'pages.apps.PagesConfig',
     'blog.apps.BlogConfig',
@@ -128,3 +130,11 @@ if os.environ.get('DEBUG') == 'TRUE':
     DEBUG = True
 elif os.environ.get('DEBUG') == 'FALSE':
     DEBUG = False
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_HOST_USER = 'apikey'
+# EMAIL_HOST_PASSWORD = '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'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True

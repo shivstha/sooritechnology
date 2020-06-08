@@ -21,12 +21,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <style>
-        .fakeimg {
-            height: 200px;
-            background: #aaa;
-        }
-    </style>
 </head>
 <body>
 
@@ -51,21 +45,72 @@
             </ul>
             <h3>For more information visit links:</h3>
             <ul>
-                <li>Wacom for business</li>
+                <li><h4>Wacom for business</h4></li>
                 <ul>
-                    <li><a href="https://www.wacom.com/en-au/for-business/industries/financial-services">Financial
-                        Service</a></li>
-                    <li><a href="https://www.wacom.com/en-au/for-business/industries/healthcare">Health Care</a></li>
-                    <li><a href="https://www.wacom.com/en-au/for-business/industries/public-sector-government">Public
-                        and private sector </a></li>
-                    <li><a href="https://www.wacom.com/en-au/for-business/industries/hospitality-tourism">Hospitality/Tourism</a>
-                    </li>
-                    <li><a href="https://www.wacom.com/en-au/for-business/industries/retail-service">Retail Service</a>
-                    </li>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/homepage_products/bj.jpg' %}" alt="">
+
+
+                        </div>
+                        <div class="col-md-8">
+                            <li><a href="https://www.wacom.com/en-au/for-business/industries/financial-services">Financial
+                                Service</a></li>
+                            <li><a href="https://www.wacom.com/en-au/for-business/industries/healthcare">Health Care</a>
+                            </li>
+                            <li><a href="https://www.wacom.com/en-au/for-business/industries/public-sector-government">Public
+                                and private sector </a></li>
+                            <li><a href="https://www.wacom.com/en-au/for-business/industries/hospitality-tourism">Hospitality/Tourism</a>
+                            </li>
+                            <li><a href="https://www.wacom.com/en-au/for-business/industries/retail-service">Retail
+                                Service</a>
+                            </li>
+
+                        </div>
+                    </div>
+
                 </ul>
-                <li><a href="https://www.wacom.com/en-au/for-business/industries/education">Wacom for education</a></li>
-                <li><a href="https://www.wacom.com/en-us/discover/design">Wacom for design</a></li>
-                <li><a href="https://www.wacom.com/en-us/for-business/products/signature-pads">Wacom signature pad</a>
+
+                <li style="margin-top: 25px;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/homepage_products/ed.jpg' %}" alt="" style="margin-left: 36px">
+
+
+                        </div>
+                        <div class="col-md-8">
+                            <a class="nav-link" href="https://www.wacom.com/en-au/for-business/industries/education">
+                                <button type="button" class="btn btn-outline-info btn-block">Wacom for education
+                                </button>
+                            </a>
+
+                        </div>
+                    </div>
+                </li>
+                <li style="margin-top: 25px">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/homepage_products/des.jpg' %}" alt="" style="margin-left: 36px">
+                        </div>
+                        <div class="col-md-8">
+                            <a class="nav-link" href="https://www.wacom.com/en-us/discover/design">
+                                <button type="button" class="btn btn-outline-info btn-block">Wacom for design</button>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li style="margin-top: 25px">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="{% static 'images/homepage_products/sig.jpg' %}" alt="" style="margin-left: 36px">
+                        </div>
+                        <div class="col-md-8">
+                            <a class="nav-link" href="https://www.wacom.com/en-us/for-business/products/signature-pads">
+                                <button type="button" class="btn btn-outline-info btn-block">Wacom signature</button>
+                            </a>
+
+                        </div>
+                    </div>
                 </li>
             </ul>
             <hr class="d-sm-none">

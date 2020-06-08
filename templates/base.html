@@ -134,7 +134,7 @@
             right: 0;
             top: 0;
             position: absolute;
-            margin: 30px 40px 0 0;
+            margin: 20px 40px 0 0;
             color: black;
 
         }
@@ -194,114 +194,6 @@
             }
         }
 
-        /*.ham_icon {*/
-        /*    position: fixed;*/
-        /*    right: 0;*/
-        /*    top: 0;*/
-        /*    z-index: 999;*/
-        /*    margin: 20px 20px 0 0;*/
-        /*    border: 0;*/
-        /*    background: none;*/
-        /*    font-size: 24px;*/
-        /*    display: none;*/
-        /*    transition: all 0.4s;*/
-        /*    outline: none;*/
-        /*    cursor: pointer;*/
-        /*}*/
-
-
-        /* sidenav hamburger ends */
-
-        /*--------------------------------------------------------------
-        # Hero Section
-        --------------------------------------------------------------*/
-        #hero {
-            width: 100%;
-            height: 512px;
-            background-size: cover;
-            position: relative;
-            object-fit: cover;
-        }
-
-        @media (min-width: 1024px) {
-            #hero {
-                background-attachment: fixed;
-            }
-        }
-
-        #hero:before {
-            content: "";
-            background: rgba(0, 0, 0, 0.6);
-            position: absolute;
-            bottom: 0;
-            top: 0;
-            left: 0;
-            right: 0;
-        }
-
-        #hero .hero-container {
-            position: absolute;
-            bottom: 0;
-            top: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        #hero h1 {
-            margin: 30px 0 10px 0;
-            font-size: 48px;
-            font-weight: 700;
-            line-height: 56px;
-            /*text-transform: uppercase;*/
-            color: #fff;
-        }
-
-        @media (max-width: 768px) {
-            #hero h1 {
-                font-size: 28px;
-                line-height: 36px;
-            }
-        }
-
-        #hero h2 {
-            color: #eee;
-            margin-bottom: 50px;
-            font-size: 24px;
-        }
-
-        @media (max-width: 768px) {
-            #hero h2 {
-                font-size: 18px;
-                line-height: 24px;
-                margin-bottom: 30px;
-            }
-        }
-
-        #hero .btn-get-started {
-            font-family: "Poppins", sans-serif;
-            text-transform: uppercase;
-            font-weight: 500;
-            font-size: 16px;
-            letter-spacing: 1px;
-            display: inline-block;
-            padding: 8px 28px;
-            border-radius: 50px;
-            transition: 0.5s;
-            margin: 10px;
-            border: 2px solid #fff;
-            color: #fff;
-        }
-
-        #hero .btn-get-started:hover {
-            background: #2dc997;
-            border: 2px solid #2dc997;
-        }
-
 
         /* Call To Action Section
 --------------------------------*/
@@ -309,44 +201,6 @@
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('{% static '/images/background_images/call-to-action-bg.jpg' %}') fixed center center;
             background-size: cover;
             padding: 80px 0;
-        }
-
-        #call-to-action .cta-title {
-            color: #fff;
-            font-size: 28px;
-            font-weight: 700;
-        }
-
-        #call-to-action .cta-text {
-            color: #fff;
-        }
-
-        @media (min-width: 769px) {
-            #call-to-action .cta-btn-container {
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-            }
-        }
-
-        #call-to-action .cta-btn {
-            font-family: "Poppins", sans-serif;
-            text-transform: uppercase;
-            font-weight: 500;
-            font-size: 16px;
-            letter-spacing: 1px;
-            display: inline-block;
-            padding: 8px 30px;
-            border-radius: 50px;
-            transition: 0.5s;
-            margin: 10px;
-            border: 2px solid #fff;
-            color: #fff;
-        }
-
-        #call-to-action .cta-btn:hover {
-            background: #2dc997;
-            border: 2px solid #2dc997;
         }
 
         .second-title {
@@ -367,7 +221,7 @@ Header
     <div class="container">
 
         <div id="logo" class="pull-left">
-            <a href="#hero"><img src="{% static "images/logo_images/soorilogo2.jpg" %}" alt="" title=""/></a>
+            <a href="#"><img src="{% static "images/logo_images/soorilogo2.jpg" %}" alt="" title=""/></a>
             <!-- Uncomment below if you prefer to use a text logo -->
             <!--<h1><a href="#hero">Soori</a></h1>-->
         </div>
@@ -389,7 +243,7 @@ Header
         <div class="hamburger">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#">Home</a>
+                <a href="{% url 'pages:home' %}">Home</a>
                 <a href="{% url 'pages:about' %}">About</a>
                 <a href="{% url 'blog:blog_list' %}">Blog</a>
                 <a href="{% url 'pages:service' %}">Services</a>
@@ -460,7 +314,6 @@ Header
 
                     </div>
                     <div class="column-2">
-
                         <p>We are located at Koteshwor-32, Kathmandu
                         </p>
                     </div>
@@ -470,22 +323,24 @@ Header
 
                     <div class="col-sm-4">
                         <img class="grid-image" src="{% static 'images/aboutus_images/icon-1.png' %}" alt="Icon-1">
-                        <h1 class="grid-title">Usability</h1>
-                        <p class="grid-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cupiditate.
+                        <h1 class="grid-title">Learning goes digital</h1>
+                        <p class="grid-desc">The way the world learns is being transformed by digital technology. Wacom
+                            solutions help educational organizations of all kinds drive the change.
                         </p>
                     </div>
 
                     <div class="col-sm-4">
                         <img class="grid-image" src="{% static 'images/aboutus_images/icon-2.png' %}" alt="Icon-2">
-                        <h1 class="grid-title">Parallax Effect</h1>
-                        <p class="grid-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cupiditate.
+                        <h1 class="grid-title">Business solutions</h1>
+                        <p class="grid-desc">Our customized ecosystem of enterprise solutions allows your organization
+                            to reach new levels of performance from the front lines.
                         </p>
                     </div>
 
                     <div class="col-sm-4">
                         <img class="grid-image" src="{% static 'images/aboutus_images/icon-3.png' %}" alt="Icon-3">
-                        <h1 class="grid-title">Unlimited Colors</h1>
-                        <p class="grid-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cupiditate.
+                        <h1 class="grid-title">Biometric solutions</h1>
+                        <p class="grid-desc">Best biometric solutions in the town from well known brands.
                         </p>
                     </div>
 
@@ -610,7 +465,7 @@ Header
                     <img src="{% static "images/products_images/Superma.jpg" %}" alt="">
                     <a href="{% url 'pages:superma' %}">
                         <div class="details">
-                            <h4>Superma</h4>
+                            <h4>Suprema</h4>
                             <span>Click for more information</span>
                         </div>
 

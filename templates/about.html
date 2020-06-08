@@ -117,7 +117,7 @@
             right: 0;
             top: 0;
             position: absolute;
-            margin: 30px 40px 0 0;
+            margin: 20px 40px 0 0;
             color: black;
 
         }
@@ -300,7 +300,7 @@ Header
     <div class="container">
 
         <div id="logo" class="pull-left">
-            <a href="#hero"><img src="{% static 'images/logo_images/soorilogo2.jpg' %}" alt="" title=""/></a>
+            <a href="#"><img src="{% static 'images/logo_images/soorilogo2.jpg' %}" alt="" title=""/></a>
             <!-- Uncomment below if you prefer to use a text logo -->
             <!--<h1><a href="#hero">Soori</a></h1>-->
         </div>
@@ -316,13 +316,14 @@ Header
 <!--==========================
   Hero Section../img/Contact.jpg
 ============================-->
-<section id="hero" style="background: url({% static 'images/background_images/about_us.jpeg' %}) top center;">
+<section id="hero"
+         style="background: url(https://www.susangreenecopywriter.com/wp-content/uploads/2013/01/photo-1518081461904-9d8f136351c2.jpg);">
     <div class="index_menu">
         <div class="hamburger">
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="{% url 'pages:home' %}">Home</a>
-                <a href="#">About</a>
+                <a href="{% url 'pages:about' %}">About</a>
                 <a href="{% url 'blog:blog_list' %}">Blog</a>
                 <a href="{% url 'pages:service' %}">Services</a>
                 <a href="{% url 'pages:product' %}">Products</a>

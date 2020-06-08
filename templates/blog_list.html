@@ -26,7 +26,7 @@
     <!-- Libraries CSS Files -->
     <script src="https://kit.fontawesome.com/f41f16c23e.js" crossorigin="anonymous"></script>
 
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
 
     <!-- Main Stylesheet File -->
     <link href="{% static "css/style.css" %}" rel="stylesheet">
@@ -107,7 +107,7 @@
             right: 0;
             top: 0;
             position: absolute;
-            margin: 30px 40px 0 0;
+            margin: 20px 40px 0 0;
             color: black;
 
         }
@@ -238,7 +238,7 @@ Header
     <div class="container">
 
         <div id="logo" class="pull-left">
-            <a href="#hero"><img src="{% static "images/logo_images/soorilogo2.jpg" %}" alt="" title=""/></a>
+            <a href="#"><img src="{% static "images/logo_images/soorilogo2.jpg" %}" alt="" title=""/></a>
             <!-- Uncomment below if you prefer to use a text logo -->
             <!--<h1><a href="#hero">Soori</a></h1>-->
         </div>
@@ -288,6 +288,7 @@ Header
     <section id="services">
         <div class="container wow fadeIn">
             <div class="row">
+            {% if post %}
                 {% for post in post_list %}
                     <div class="col-lg-4 col-md-6 wow fadeInUp">
                         <div class="box">
@@ -310,6 +311,10 @@ Header
                         </div>
                     </div>
                 {% endfor %}
+            {% else %}
+
+
+            {% endif %}
 
             </div>
 

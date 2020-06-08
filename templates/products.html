@@ -108,7 +108,7 @@
             right: 0;
             top: 0;
             position: absolute;
-            margin: 30px 40px 0 0;
+            margin: 20px 40px 0 0;
             color: black;
 
         }
@@ -167,21 +167,6 @@
                 font-size: 18px;
             }
         }
-
-        /*.ham_icon {*/
-        /*    position: fixed;*/
-        /*    right: 0;*/
-        /*    top: 0;*/
-        /*    z-index: 999;*/
-        /*    margin: 20px 20px 0 0;*/
-        /*    border: 0;*/
-        /*    background: none;*/
-        /*    font-size: 24px;*/
-        /*    display: none;*/
-        /*    transition: all 0.4s;*/
-        /*    outline: none;*/
-        /*    cursor: pointer;*/
-        /*}*/
 
 
         /* sidenav hamburger ends */
@@ -291,7 +276,7 @@ Header
     <div class="container">
 
         <div id="logo" class="pull-left">
-            <a href="#hero"><img src="{% static 'images/logo_images/soorilogo2.jpg' %}" alt="" title=""/></a>
+            <a href="#"><img src="{% static 'images/logo_images/soorilogo2.jpg' %}" alt="" title=""/></a>
             <!-- Uncomment below if you prefer to use a text logo -->
             <!--<h1><a href="#hero">Soori</a></h1>-->
         </div>
@@ -307,7 +292,8 @@ Header
 <!--==========================
   Hero Section../img/Contact.jpg
 ============================-->
-<section id="hero" style="background: url({% static 'images/background_images/products.jpg' %}) top center;">
+<section id="hero"
+         style="background: url(https://i.pinimg.com/originals/26/9e/d3/269ed35e7c0c57496c669f85f2bb9a59.jpg);">
     <div class="index_menu">
         <div class="hamburger">
             <div id="mySidenav" class="sidenav">
@@ -316,7 +302,7 @@ Header
                 <a href="{% url 'pages:about' %}">About</a>
                 <a href="{% url 'blog:blog_list' %}">Blog</a>
                 <a href="{% url 'pages:service' %}">Services</a>
-                <a href="#">Products</a>
+                <a href="{% url 'pages:product' %}">Products</a>
                 <a href="{% url 'pages:contact' %}">Contact</a>
                 <hr>
                 <!--social sites links-->
